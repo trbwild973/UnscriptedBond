@@ -5,7 +5,7 @@ A minimalist, elegant one-page website dedicated to celebrating a special friend
 ## 🌟 Overview  
 This website is designed with an **"Old Money" aesthetic** while incorporating a soft **baby blue theme**—a personal touch reflecting the favorite color of the person it is about. It features:  
 - A **timeless serif font (Garamond & Playfair Display)** for a classic feel.  
-- A **baby blue background** with navy and gold accents for sophistication.  
+- A **sky blue background** with navy and gold accents for sophistication.  
 - A meaningful **friendship quote** that resonates with the theme.  
 
 ## 🎨 Features  
