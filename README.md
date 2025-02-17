@@ -1,4 +1,4 @@
-# The Unscripted Bond 🌊💙  
+# The Unscripted Bond 🌊
 
 A minimalist, elegant one-page website dedicated to celebrating a special friendship.  
 
@@ -19,7 +19,4 @@ This website is designed with an **"Old Money" aesthetic** while incorporating a
 - **CSS3** for styling and enhancing the aesthetics  
 - **GitHub Pages** for hosting the site  
 
-## 🚀 How to Use  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/the-unscripted-bond.git
+## If this wasn't made by you or sent to you please don't open. Nothing held against it but requested do not open, do not clone or any sort of copying it off. 
