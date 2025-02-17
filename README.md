@@ -1,6 +1,6 @@
 # The Unscripted Bond 🌊
 
-A minimalist, elegant one-page website dedicated to celebrating a special friendship.  
+A minimalist, elegant website dedicated to celebrating a special friendship.  
 
 ## 🌟 Overview  
 This website is designed with an **"Old Money" aesthetic** while incorporating a soft **baby blue theme**—a personal touch reflecting the favorite color of the person it is about. It features:  
