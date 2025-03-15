@@ -124,7 +124,14 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             color: rgb(8, 244, 212);
         }
-
+        button {
+            font-size: 16px;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #14213D;
+            color: white;
+        }
         #passwordContainer {
             display: flex;
             flex-direction: column;
@@ -180,7 +187,14 @@
             <h3>2KS</h3>
             <div class="divider"></div>
             <p class="quote">"A connection that goes beyond time and space, a bond that feels like home, no matter where you are."</p>
-
+            <div class="divider"></div>
+            <audio id="background-music">
+                <source src="music.mp3" type="audio/mp3">
+            </audio>
+            <p class="pclass">Not necessary, but recommended.</p>
+            <button id="start-button">Start</button>
+            <button id="stop-button">Stop</button>
+            <div class="divider"></div>
             <div class="button-container">
                 <a href="intro.html" class="nav-button">Intro</a>
                 <a href="Khansa's side.html" class="nav-button">Khansa's Side</a>
@@ -209,6 +223,33 @@
                 errorMessage.textContent = "Incorrect password, try again.";
             }
         }
+        const music = document.getElementById('background-music');
+        const startButton = document.getElementById('start-button');
+        const stopButton = document.getElementById('stop-button');
+        let isStopped = false; // Track if the user has stopped music
+
+        // Start the music
+        startButton.addEventListener('click', () => {
+            isStopped = false; // Reset stop state
+            music.volume = 0.5; // Set volume to 50%
+            music.muted = false;
+            music.play().catch(error => console.log("Playback error:", error));
+        });
+
+        // Stop the music permanently
+        stopButton.addEventListener('click', () => {
+            isStopped = true; // Mark as stopped
+            music.pause();
+            music.currentTime = 0; // Reset to the beginning
+        });
+
+        // Loop the song if stop button is NOT pressed
+        music.addEventListener('ended', () => {
+            if (!isStopped) {
+                music.currentTime = 0; // Restart song
+                music.play(); // Play again
+            }
+        });
     </script>
 
 </body>
