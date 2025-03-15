@@ -69,7 +69,12 @@
             margin-top: 20px;
         }
 
-        
+        button {
+    font-size: 16px;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+}
         .nav-button {
             background-color: #14213D; 
             color: white;
@@ -129,7 +134,14 @@
         <div class="divider"></div>
         
                 <p class="quote">"Friendship isn't who you've known longest, but who walked into your life, said 'I'm here for you' and proved it."</p>
-
+        <div class="divider"></div>
+            <audio id="background-music">
+                <source src="music.mp3" type="audio/mp3">
+            </audio>
+            <p class="pclass">Not necessary, but recommended.</p>
+            <button id="start-button">Start</button>
+            <button id="stop-button">Stop</button>
+            <div class="divider"></div>
         
        
         
@@ -162,4 +174,33 @@
     </div>
 
 </body>
+<script>
+    const music = document.getElementById('background-music');
+            const startButton = document.getElementById('start-button');
+            const stopButton = document.getElementById('stop-button');
+            let isStopped = false; // Track if the user has stopped music
+    
+            // Start the music
+            startButton.addEventListener('click', () => {
+                isStopped = false; // Reset stop state
+                music.volume = 0.5; // Set volume to 50%
+                music.muted = false;
+                music.play().catch(error => console.log("Playback error:", error));
+            });
+    
+            // Stop the music permanently
+            stopButton.addEventListener('click', () => {
+                isStopped = true; // Mark as stopped
+                music.pause();
+                music.currentTime = 0; // Reset to the beginning
+            });
+    
+            // Loop the song if stop button is NOT pressed
+            music.addEventListener('ended', () => {
+                if (!isStopped) {
+                    music.currentTime = 0; // Restart song
+                    music.play(); // Play again
+                }
+            });
+</script>
 </html>
