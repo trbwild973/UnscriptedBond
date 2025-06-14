@@ -6,6 +6,7 @@
     <title>The Unscripted Bond</title>
 
     <style>
+        
         body {
             background-color: #B2DFFC; 
             color: #1C1C1C; 
@@ -14,20 +15,14 @@
             text-align: center;
         }
 
-        #passwordContainer {
-            margin-top: 100px;
-        }
-
-        #protectedContent {
-            display: none;
-        }
-
+        
         .container {
             max-width: 800px;
             margin: 20px auto; 
             padding: 10px;
         }
 
+        
         h1 {
             font-size: 42px;
             font-weight: bold;
@@ -39,6 +34,7 @@
             margin-bottom: 5px;
         }
 
+        
         h3 {
             font-size: 16px;
             font-style: italic;
@@ -46,6 +42,7 @@
             margin-top: 2px;
         }
 
+        
         .divider {
             width: 50px;
             height: 1px;
@@ -54,6 +51,7 @@
             border-radius: 2px;
         }
 
+        
         .quote {
             font-size: 18px;
             font-style: italic;
@@ -62,14 +60,31 @@
             max-width: 80%;
             margin: 15px auto 20px;
         }
+        .secret-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.secret-link:hover {
+    color: gold; /* Optional: subtle hover effect */
+}
 
+        
         .button-container {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-top: 20px;
         }
-
+        button {
+            font-size: 16px;
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: #14213D;
+            color: white;
+        }
+        
         .nav-button {
             background-color: #14213D; 
             color: white;
@@ -89,105 +104,56 @@
             color: #14213D;
         }
 
-        .content {
-            width: 80%;
-            background-color: #14213D;
-            text-align: justify;
-            margin: 20px auto;
-            border-radius: 25px;
-            padding: 20px 25px;
-            display: block;
-            color: white;
-            line-height: 1.6;
-            font-family: "Cormorant Garamond", serif;
-            font-size: 17px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .sign {
-            font-family: "Playfair Display", serif;
-            font-size: 22px;
-            color: gold;
-            font-style: italic;
-            letter-spacing: 1px;
-        }
-
-        .date {
-            font-family: "Playfair Display", serif;
-            font-size: 17px;
-            color: gold;
-            font-style: italic;
-            letter-spacing: 1px;
-        }
-        
         .h3class{
             font-family: Georgia, 'Times New Roman', Times, serif;
             color: rgb(8, 244, 212);
         }
-        button {
-            font-size: 16px;
-            padding: 5px 10px;
-            margin: 5px;
-            cursor: pointer;
-            background-color: #14213D;
-            color: white;
-        }
-        #passwordContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 150px;
-        }
 
-        #passwordInput {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #14213D;
-            border-radius: 5px;
-            margin-bottom: 10px;
+        .content {
+    width: 80%;
+    background-color: #14213D;
+    text-align: justify;  /* Justifies text for better readability */
+    margin: 20px auto;
+    border-radius: 25px;
+    padding: 20px 25px;
+    display: block;
+    color: white;
+    line-height: 1.6;  /* Better spacing between lines */
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
         }
+        
+    .sign {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    color: gold;
+    font-style: italic;
+    letter-spacing: 1px;
+    }
 
-        #submitButton {
-            background-color: #14213D;
-            color: white;
-            font-size: 16px;
-            padding: 10px 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s ease-in-out;
-        }
-
-        #submitButton:hover {
-            background-color: gold;
-            color: #14213D;
-        }
-
-        #errorMessage {
-            color: red;
-            margin-top: 10px;
-        }
+    .date {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    color: gold;
+    font-style: italic;
+    letter-spacing: 1px;
+    }
 
     </style>
 </head>
 <body>
 
-    <!-- Password Protection Screen -->
-    <div id="passwordContainer">
-        <h2>Enter Password to Access</h2>
-        <input type="password" id="passwordInput" placeholder="Enter Password">
-        <button id="submitButton" onclick="checkPassword()">Submit</button>
-        <p id="errorMessage"></p>
-    </div>
 
-    <!-- Protected Content (Hidden Initially) -->
-    <div id="protectedContent">
-        <div class="container">
-            <h1>The Unscripted Bond</h1>
-            <h3>2KS</h3>
-            <div class="divider"></div>
-            <p class="quote">"A connection that goes beyond time and space, a bond that feels like home, no matter where you are."</p>
-            <div class="divider"></div>
+    <div class="container">
+        <h1>The Unscripted Bond</h1>
+        <h3>2KS</h3>
+        <div class="divider"></div>
+        <a href="secrett.html" class="quote secret-link">
+    "A connection that goes beyond time and space, a bond that feels like home, no matter where you are."
+</a>
+
+        <div class="divider"></div>
             <audio id="background-music">
                 <source src="music.mp3" type="audio/mp3">
             </audio>
@@ -195,62 +161,51 @@
             <button id="start-button">Start</button>
             <button id="stop-button">Stop</button>
             <div class="divider"></div>
-            <div class="button-container">
-                <a href="intro.html" class="nav-button">Intro</a>
-                <a href="Khansa's side.html" class="nav-button">Khansa's Side</a>
-                <a href="Kavya's side.html" class="nav-button">Kavya's Side</a>
-                <a href="page3.html" class="nav-button">Journal</a> 
-            </div>
-        </div>
-
-        <div class="content">
-            <h3 class="h3class">To the bond that is unscripted and can’t be explained by a thousand or millions words. A story about two souls that met in a time they would never thought they would meet each other. Bonded together like two pieces of puzzle, weirdly shaped but a perfect fit. You might wonder who are the two souls? Well, it is the two KS, which is just Kavya Sharma and Khansa Salvia, an Indian boy and an Indonesian girl who met in an unexpected time. From the first time they meet, with the one interaction they had, and that one question that people always asked to them, they instantly clicked with each other like a perfect match of a lock and key. It’s hard to find a perfect key from many keys to open that one lock, but when the lock finally has a perfect match, it will finally open. That’s how their friendship is, when they finally met each other, they are a perfect friend duo that can complement each other. They both trust each other, which is the key of their friendship. For them when they trust each other, they can back up each other and be comfortable with opening up about their problems. This is a story of their friendship, bond, their journey together as the bestest friends, silly and funny stories, and many challenges ahead of them. </h3>
-            <p class="sign">- 2KS </p>
-            <p class="date">25/09/2024 - now </p>
+        
+        <div class="button-container">
+            <a href="intro.html" class="nav-button">Intro</a>
+            <a href="Khansa's side.html" class="nav-button">Khansa's Side</a>
+            <a href="Kavya's side.html" class="nav-button">Kavya's Side</a>
+            <a href="page3.html" class="nav-button">Journal</a> 
         </div>
     </div>
 
-    <script>
-        function checkPassword() {
-            const correctPassword = "Khansavya1426";
-            const enteredPassword = document.getElementById("passwordInput").value;
-            const errorMessage = document.getElementById("errorMessage");
-
-            if (enteredPassword === correctPassword) {
-                document.getElementById("passwordContainer").style.display = "none";
-                document.getElementById("protectedContent").style.display = "block";
-            } else {
-                errorMessage.textContent = "Incorrect password, try again.";
-            }
-        }
-        const music = document.getElementById('background-music');
-        const startButton = document.getElementById('start-button');
-        const stopButton = document.getElementById('stop-button');
-        let isStopped = false; // Track if the user has stopped music
-
-        // Start the music
-        startButton.addEventListener('click', () => {
-            isStopped = false; // Reset stop state
-            music.volume = 0.5; // Set volume to 50%
-            music.muted = false;
-            music.play().catch(error => console.log("Playback error:", error));
-        });
-
-        // Stop the music permanently
-        stopButton.addEventListener('click', () => {
-            isStopped = true; // Mark as stopped
-            music.pause();
-            music.currentTime = 0; // Reset to the beginning
-        });
-
-        // Loop the song if stop button is NOT pressed
-        music.addEventListener('ended', () => {
-            if (!isStopped) {
-                music.currentTime = 0; // Restart song
-                music.play(); // Play again
-            }
-        });
-    </script>
+    <div class="content">
+        
+        <h3 class="h3class">To the bond that is unscripted and can’t be explained by a thousand or millions words. A story about two souls that met in a time they would never thought they would meet each other. Bonded together like two pieces of puzzle, weirdly shaped but a perfect fit. You might wonder who are the two souls? Well, it is the two KS, which is just Kavya Sharma and Khansa Salvia, an Indian boy and an Indonesian girl who met in an unexpected time. From the first time they meet, with the one interaction they had, and that one question that people always asked to them, they instantly clicked with each other like a perfect match of a lock and key. It’s hard to find a perfect key from many keys to open that one lock, but when the lock finally has a perfect match, it will finally open. That’s how their friendship is, when they finally met each other, they are a perfect friend duo that can complement each other. They both trust each other, which is the key of their friendship. For them when they trust each other, they can back up each other and be comfortable with opening up about their problems. This is a story of their friendship, bond, their journey together as the bestest friends, silly and funny stories, and many challenges ahead of them. 
+        </h3>
+        <p class="sign">- 2KS </p>
+        <p class="date">25/09/2024 - now </p>
+        
 
 </body>
+<script>
+    const music = document.getElementById('background-music');
+            const startButton = document.getElementById('start-button');
+            const stopButton = document.getElementById('stop-button');
+            let isStopped = false; // Track if the user has stopped music
+    
+            // Start the music
+            startButton.addEventListener('click', () => {
+                isStopped = false; // Reset stop state
+                music.volume = 0.5; // Set volume to 50%
+                music.muted = false;
+                music.play().catch(error => console.log("Playback error:", error));
+            });
+    
+            // Stop the music permanently
+            stopButton.addEventListener('click', () => {
+                isStopped = true; // Mark as stopped
+                music.pause();
+                music.currentTime = 0; // Reset to the beginning
+            });
+    
+            // Loop the song if stop button is NOT pressed
+            music.addEventListener('ended', () => {
+                if (!isStopped) {
+                    music.currentTime = 0; // Restart song
+                    music.play(); // Play again
+                }
+            });
+</script>
 </html>
