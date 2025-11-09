@@ -1,204 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Unscripted Bond</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Lover</title>
+<style>
+  body {
+    background: #f6e6f5;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #5a3c60;
+    text-align: center;
+    margin: 0;
+    overflow-x: hidden;
+  }
 
-    <style>
-        
-        body {
-            background-color: #B2DFFC; 
-            color: #1C1C1C; 
-            font-family: "Garamond", "Playfair Display", serif;
-            margin: 0;
-            text-align: center;
-        }
+  .container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 0;
+  }
 
-        
-        .container {
-            max-width: 800px;
-            margin: 20px auto; 
-            padding: 10px;
-        }
+  .section {
+    padding: 60px 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+  }
 
-        a{
-            text-decoration: none;
-        }
-        h1 {
-            font-size: 42px;
-            font-weight: bold;
-            color: #14213D;
-            letter-spacing: 2px;
-            border-bottom: 2px solid gold;
-            display: inline-block;
-            padding-bottom: 3px;
-            margin-bottom: 5px;
-        }
+  .title-section {
+    background-color: #fddde6;
+  }
 
+  .message-section {
+    background-color: #e8d4f7;
+  }
 
-        h3 {
-            font-size: 16px;
-            font-style: italic;
-            color: #8B8000;
-            margin-top: 2px;
-        }
+  .proposal-section {
+    background-color: #fff1e6;
+  }
 
-        
-        .divider {
-            width: 50px;
-            height: 1px;
-            background-color: gold;
-            margin: 10px auto;
-            border-radius: 2px;
-        }
+  h1 {
+    font-size: 2.8em;
+    margin: 0;
+  }
 
-    
-        .quote {
-            font-size: 18px;
-            font-style: italic;
-            font-weight: bold;
-            color: #1C1C1C;
-            max-width: 80%;
-            margin: 15px auto 20px;
-        }
+  h2 {
+    font-size: 1.8em;
+  }
 
-        
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .h2class{
-            color:antiquewhite;
-            font-size: medium;
-        }
-        .note{
-            font-size: medium;
-            color: lawngreen;
-        }
-        
-        .nav-button {
-            background-color: #14213D; 
-            color: white;
-            font-size: 16px;
-            padding: 10px 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            transition: background 0.3s ease-in-out;
-            width: 130px;
-        }
+  p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+  }
 
-        .nav-button:hover {
-            background-color: gold;
-            color: #14213D;
-        }
+  .buttons {
+    margin-top: 20px;
+  }
 
-                .content {
-    width: 80%;
-    background-color: #14213D;
-    text-align: justify;  /* Justifies text for better readability */
-    margin: 20px auto;
-    border-radius: 25px;
-    padding: 20px 25px;
-    display: block;
+  button {
+    background-color: #dba3d0;
+    border: none;
     color: white;
-    line-height: 1.6;  /* Better spacing between lines */
-    font-family: "Cormorant Garamond", serif;
-    font-size: 17px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-        }
-        button {
-            font-size: 16px;
-            padding: 5px 10px;
-            margin: 5px;
-            cursor: pointer;
-            background-color: #14213D;
-            color: white;
-        }
-        .pclass {
-            font-size: 17px;
-            word-spacing: 2px;
-            font-family: "Cormorant Garamond", serif;
-            text-indent: 20px; /* Indent first line for a structured look */
-            margin-bottom: 15px;
-        }
-        .links a{
-            text-decoration:none;
-            color:#66ccff;
-            font-weight: 600;
-        }
-        .links a:hover{
-            color: gold;
-            transition: color 0.4s ease;
-        }
-    </style>
+    font-size: 1em;
+    padding: 10px 25px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: #c68bc2;
+  }
+
+  .sparkle {
+    position: fixed;
+    top: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fall 3s linear forwards;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+  }
+</style>
 </head>
 <body>
 
-    
-    <div class="container">
-        <h1>The Unscripted Bond</h1>
-        <h3>For Khansa</h3>
-        <div class="divider"></div>
-        <p class="quote">For you child, for when I can't be online but you need something.</p>
-       <div class="button-container">
-            <a href="intro.html" class="nav-button">Intro</a>
-            <a href="Khansa's side.html" class="nav-button">Khansa's Side</a>
-            <a href="Kavya's side.html" class="nav-button">Kavya's Side</a>
-            <a href="page3.html" class="nav-button">Journal</a> 
-        </div>
-    </div>
+<div class="container">
 
-     <div class="content">
-        <h2 class="h2class">Ok child, as you know, I know you the most. I know you the best. No one knows you more than me because I love you more than anyone else. Anyways, another sub-page here. This is for when something happens, anything really, this was mostly what I could think about happening and this is my solution kinda. Normally I need to calm you down first ofc so I have to do this first. This is mostly to just calm you down and all, just yap on ig and I will come with more help when I can. </h2>
-        <h2 class="note">Note: Child, this is only to calm you down for some time until I can come online since we won't always be online at the same time. Whatever you do, this is only to calm you down, the rest, you have to tell me on ig for me to help u more.</h2>
-        <br>
-        <h2> Ok Main Links Below This Text:</h2>
-        <h2 class="h2class">Click on any of these based on what happened</h2>
-        <div class="links">
-            <br>
-            <a href="talk-behind-ur-back.html">If someone talked behind your back</a>
-            <br>
-            <a href="someone-hate-you.html">If you feel someone hates you</a>
-            <br>
-            <a href="someone-did-something.html">If someone did anything to you in school</a>
-            <br>
-            <a href="family.html">If something happened between your family</a>
-            <br>
-            <a href="overthinking-school.html">If you are overthinking over something about school</a>
-            <br>
-            <br>
-            <br>
-            <a href="miss-me.html">When you miss me</a>
-            <br>
-            <a href="mad.html">When you think I am mad at you</a>
-            <br>
-            <a href="us.html">When something happened between us</a>
-            <br>
-            <a href="sad-us.html">When you are sad over something that happened between us</a>
-            <br>
-            <a href="overthinking-us.html">If you ar eoverthinking over something that happened between us</a>
-            <br>
-            <br>
-            <br>
-            <a href="sad-idk.html">When you are sad for an unknown reason</a>
-            <br>
-            <a href="mean.html">When you feel like you are mean</a>
-            <br>
-            <a href="selfish.html">When you feel like you are selfish</a>
-            <br>
-            <a href="frustrated.html">When you feel frustrated</a>
-            <br>
-            <a href="mad-rnd.html">When you are mad over something</a>
-            <br>
-            <a href="overthinking-random.html">When you are overthinking about anything at all</a>
-            <br>
-            <a href="cry.html">When you feel like crying at any time</a>
-        </div>
+  <div class="section title-section">
+    <h1>Happy Anniversary Darling <h1>
+  </div>
+
+  <div class="section message-section">
+    <p>
+      Well darling, while you are complaining that I didn't get you anything this month, I was here planning this the whole time. There may be one anniversary I don't get you something, but baby on out half year? Really? Anyways, if you couldn't tell already, this is themed based on you, a taylor song, so now before reading more, hopefully we are on a call rn, bc I was keeping it for that moment, guess what song theme this is on. Anyways back to the 6 months part.
+      Well, how does it feel, 6 months done, thats half a year now. Honestly to me it feels insane, like wow, almost a year now, but well either way I wouldn't miss making you something on our half year.
+      Either way my baby, ik we have a lot of work today, but yea, be happy I have so much work to do and I was busy making this for you instead because I love you. I can't imagine a world without you child, 
+      I love you so much and you have no idea how much you mean to me. I will always love you, and you will always mean more than the world to me. Thank you for everything, thank you for being there with me when I was down, 
+      thank you for supporting me when I was giving up, just thank you for everything. I don't know how I'd ever repay you in this endless debt you've put me in, but no matter what happens, I will never stop showing you my love for you.
+      I am sorry for sometimes when I didn't think some things through, and I am sorry for any other future time I make you mad or upset, I never have the intention to hurt you, I want nothing but for you to be happy child, I'm sorry.
+      I will love you more than you know, and I will always love you for you. Don't give me a fake version others get, give it to them, I actually care about you, and I have no plans on changing that. I will always love you darling.
+    </p>
+  </div>
+
+  <div class="section proposal-section" id="proposal">
+    <h2>Even after everything though, I never really asked you out now did I? So lets make it more official than it already is my baby. Khansa, will you be my girlfriend?</h2>
+    <div class="buttons">
+      <button onclick="sayYes()">Yes - good button</button>
+      <button>No - bad button</button>
     </div>
+  </div>
+
+  <div class="section message-section">
+    <p>Anyways darling, I love you, and now its time to either sleep of work, I'm not sure when I'm sending you this, I just saved it for a time when we were on a call fr. But yea, I love you Khansa, and I always will. Happy 6 Month Anniversary Baby ❤️❤️</p>
+  </div>
+</div>
+
+<audio id="song" src="lover.mp3"></audio>
+
+<script>
+function sayYes() {
+  const song = document.getElementById('song')
+  song.currentTime = 70 // pick the romantic part
+  song.play()
+
+  for (let i = 0; i < 100; i++) createSparkle()
+
+}
+
+function createSparkle() {
+  const sparkle = document.createElement('div')
+  sparkle.classList.add('sparkle')
+  sparkle.style.left = Math.random() * 100 + 'vw'
+  sparkle.style.background = `hsl(${Math.random() * 360},70%,80%)`
+  sparkle.style.animationDuration = (2 + Math.random() * 3) + 's'
+  document.body.appendChild(sparkle)
+  setTimeout(() => sparkle.remove(), 4000)
+}
+</script>
+
+</body>
 </html>
