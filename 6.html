@@ -6,9 +6,9 @@
 <title>For My Lover</title>
 <style>
   body {
-    background: #f6e6f5;
+    background: linear-gradient(to bottom right, #e8f0ff, #f7e6ff);
     font-family: 'Helvetica Neue', sans-serif;
-    color: #5a3c60;
+    color: #4a3b65;
     text-align: center;
     margin: 0;
     overflow-x: hidden;
@@ -25,27 +25,30 @@
     padding: 60px 20px;
     border-radius: 15px;
     margin: 20px 0;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
   }
 
   .title-section {
-    background-color: #fddde6;
+    background: linear-gradient(135deg, #d8eaff, #f0e6ff);
   }
 
   .message-section {
-    background-color: #e8d4f7;
+    background: linear-gradient(135deg, #e6f7ff, #f3e8ff);
   }
 
   .proposal-section {
-    background-color: #fff1e6;
+    background: linear-gradient(135deg, #fff8f0, #e8faff);
   }
 
   h1 {
     font-size: 2.8em;
     margin: 0;
+    color: #3c2f58;
   }
 
   h2 {
     font-size: 1.8em;
+    color: #463661;
   }
 
   p {
@@ -53,6 +56,7 @@
     line-height: 1.6em;
     max-width: 600px;
     margin: 20px auto 0 auto;
+    color: #4b3d60;
   }
 
   .buttons {
@@ -60,7 +64,7 @@
   }
 
   button {
-    background-color: #dba3d0;
+    background-color: #bfa8ff;
     border: none;
     color: white;
     font-size: 1em;
@@ -69,10 +73,12 @@
     border-radius: 20px;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: 0 0 8px rgba(191,168,255,0.6);
   }
 
   button:hover {
-    background-color: #c68bc2;
+    background-color: #a690ff;
+    box-shadow: 0 0 12px rgba(166,144,255,0.8);
   }
 
   .sparkle {
@@ -96,7 +102,7 @@
 <div class="container">
 
   <div class="section title-section">
-    <h1>Happy Anniversary Darling <h1>
+    <h1>Happy Anniversary Darling</h1>
   </div>
 
   <div class="section message-section">
@@ -120,27 +126,26 @@
   </div>
 
   <div class="section message-section">
-    <p>Anyways darling, I love you, and now its time to either sleep of work, I'm not sure when I'm sending you this, I just saved it for a time when we were on a call fr. But yea, I love you Khansa, and I always will. Happy 6 Month Anniversary Baby ❤️❤️</p>
+    <p>Anyways darling, I love you, and now its time to either sleep or work, I'm not sure when I'm sending you this, I just saved it for a time when we were on a call fr. But yea, I love you Khansa, and I always will. Happy 6 Month Anniversary Baby ❤️❤️</p>
   </div>
 </div>
 
-<audio id="song" src="lover.mp3"></audio>
+<audio id="song" src="opalite.mp3"></audio>
 
 <script>
 function sayYes() {
   const song = document.getElementById('song')
-  song.currentTime = 70 // pick the romantic part
+  song.currentTime = 70
   song.play()
 
   for (let i = 0; i < 100; i++) createSparkle()
-
 }
 
 function createSparkle() {
   const sparkle = document.createElement('div')
   sparkle.classList.add('sparkle')
   sparkle.style.left = Math.random() * 100 + 'vw'
-  sparkle.style.background = `hsl(${Math.random() * 360},70%,80%)`
+  sparkle.style.background = `hsl(${Math.random() * 360},70%,85%)`
   sparkle.style.animationDuration = (2 + Math.random() * 3) + 's'
   document.body.appendChild(sparkle)
   setTimeout(() => sparkle.remove(), 4000)
