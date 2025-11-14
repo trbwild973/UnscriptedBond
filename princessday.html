@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Princess Day</title>
+  <style>
+    body {font-family: Arial, sans-serif; text-align: center; background: #b6ddff; margin: 0; padding: 0;}
+    #garden {margin-top: 40px;}
+    .tulip {display: inline-block; margin: 28px; position: relative;}
+    .stem {width: 6px; height: 80px; background: green; margin: 0 auto;}
+    .petal {width: 38px; height: 48px; background: white; border-radius: 60% 60% 0 0; margin: 0 auto; position: relative; overflow: hidden;}
+    .petal:before, .petal:after {content: ''; width: 38px; height: 48px; background: white; border-radius: 60% 60% 0 0; position: absolute; top: 0;}
+    .petal:before {left: -20px; transform: rotate(-15deg);} 
+    .petal:after {right: -20px; transform: rotate(15deg);} 
+    .centerline {width: 4px; height: 28px; background: #e0e0e0; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); border-radius: 2px;}
+    #message {
+  margin-top: 25px;
+  font-size: 22px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  background: #ffffffcc;
+  border-radius: 10px;
+}
+
+    #btn {padding: 12px 28px; border: none; background: #4b79ff; color: white; font-size: 18px; border-radius: 10px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2);} 
+    #btn:hover {background: #355de0;} 
+    .h1{font-weight: bold;}
+    .p{font-size: medium;}
+
+  </style>
+</head>
+<body>
+  <div id="header" style="background:#cde6ff; padding:20px; font-size:26px;"><h1 class="h1">National Princess Day</h1>
+    <p class="p">Happy Princess day my baby, since I can't get you real flowers, here's something special for you, not the best but yea I tried.</p>
+  </div>
+
+  <button id="btn" style="margin-top:40px;">Keep Clicking till nothing happens.</button>
+
+  <div id="garden"></div>
+  <div id="message"></div>
+
+<script>
+    let clickCount = 0;
+
+    function makeTulip() {
+      const wrap = document.createElement('div');
+      wrap.className = 'tulip';
+
+      const petal = document.createElement('div');
+      petal.className = 'petal';
+
+      const stem = document.createElement('div');
+      stem.className = 'stem';
+
+      wrap.appendChild(petal);
+      wrap.appendChild(stem);
+      return wrap;
+    }
+
+    document.getElementById('btn').addEventListener('click', function() {
+      clickCount++;
+      const garden = document.getElementById('garden');
+      const msg = document.getElementById('message');
+
+      if (clickCount === 1) {
+        garden.appendChild(makeTulip());
+      } else if (clickCount > 1 && clickCount <= 6) {
+        garden.appendChild(makeTulip());
+      } else if (clickCount === 7) {
+        msg.textContent = 'White tulips for you because I cant get u real ones sadly. But either way, Happy Princess Day my princess. I love you a lot child, and yes I was making this while you were sleeping and all, by when u were sleeping, i mean the night u said we both stay up but noooo u slept. But yea anyways child, ik we wont talk much now bc my parents will be back but yea, I love you child.';
+      }
+    });
+  </script>
+</body>
+</html>
